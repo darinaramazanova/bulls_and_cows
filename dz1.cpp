@@ -145,7 +145,7 @@ void game(){
             gameisover=1;
             std::cout<<"you win!"<<std::endl;
         }
-        if (gameisover != user_won)
+        if (gameisover != user_win)
         {
             std::cout <<"Bulls: "<<coeffs[0]<<", cows: "<<coeffs[1]<<std::endl;
         }
@@ -156,7 +156,7 @@ void game(){
             std::cin>>t;
             if (t =="y")
             {
-                gameisover = bot_won;
+                gameisover = bot_win;
                 std::cout<<"bot win, you loser"<<std::endl;
                 return;
             }
@@ -166,9 +166,9 @@ void game(){
             }
             std::cout<<"user invalid. (y/n): ";
         }
-        if (gameisover != bot_won)
+        if (gameisover != bot_win)
         {
-            if (gameisover == user_won)
+            if (gameisover == user_win)
             {
                 std::cout<<"you win!"<<std::endl;
                 return;
